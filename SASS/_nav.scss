@@ -1,0 +1,324 @@
+.nav-container {
+    position: fixed;
+    width: 100%;
+    z-index: 1040;
+    .navbar-jump {
+        align-items: normal !important;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        background-color: $glass-default;
+        border-bottom: 3px solid fade-out($color-background, 0.85);
+        height: 60px;
+        transition: all $nav-animation-speed ease-in-out;
+        transform: translate3d(0,0,0);
+        .nav-dropdown {
+            display: inline-block;
+            .dropdown-toggle {
+                vertical-align: middle;
+                line-height: 10px;
+                -webkit-appearance: none;
+                background: transparent;
+                color: fade-out($color-white, 0.5);
+                border: none;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0;
+                text-transform: uppercase;
+                cursor: pointer;
+                i {
+                    transition: all $nav-animation-speed ease-in-out;
+                    font-size: 30px;
+                }
+                .master-race & {
+                    color: fade-out($color-charcoal, 0.5);
+                }
+                &::after {
+                    display: none;
+                }
+                &:focus,
+                &:active,
+                &:active:focus {
+                    outline: none;
+                    border: none;
+                }
+                &:hover {
+                    cursor: pointer;
+                    border: none;
+                    color: $color-white;
+                    .master-race & {
+                        color: $color-charcoal;
+                    }
+                }
+            }
+            .dropdown-menu {
+                background-color: $glass-default;
+                font-size: 10px;
+                line-height: 20px;
+                color: $color-white;
+                width: auto;
+                text-transform: uppercase;
+                outline: none;
+                text-decoration: none;
+                border-radius: 0;
+                padding:0;
+                animation: nav_menu_open $nav-animation-speed forwards;
+                .dropdown-divider {
+                    border-color: $color-shadow;
+                }
+                .dropdown-item {
+                    padding:0;
+                    margin:0;
+                    a {
+                        padding: 3px 10px;
+                        display: block;
+                        width:100%;
+                        text-decoration: none;
+                        outline: none;
+                        color: $color-white;
+                        i {
+                            font-size: 14px;
+                            vertical-align: middle;
+                            margin-right: 8px;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                            text-decoration: none;
+                            outline: none;
+                            background-color: $color-white;
+                            color: $color-default;
+                        }
+                    }
+                    &.active {
+                        background-color: fade-out($color-black, 0.8);
+                    }
+                }
+                &:hover {
+                    outline: none;
+                    text-decoration: none;
+                }
+                .playstation & {
+                    background-color: $glass-playstation;
+                    a:hover {
+                        color: $color-playstation;
+                    }
+                }
+                .xbox & {
+                    background-color: $glass-xbox;
+                    a:hover {
+                        color: $color-xbox;
+                    }
+                }
+                .nintendo & {
+                    background-color: $glass-nintendo;
+                    a:hover {
+                        color: $color-nintendo;
+                    }
+                }
+                .master-race & {
+                    background-color: $glass-master-race;
+                    a {
+                        color: $color-charcoal;
+                        &:hover {
+                            color: $color-charcoal;
+                        }
+                    }
+                }
+            }
+            &.show {
+                .dropdown-toggle {
+                    color: $color-white;
+                    i {
+                        transform: rotate(-90deg);
+                    }
+                    .master-race & {
+                        color: $color-charcoal;
+                    }
+                }
+                .dropdown-menu {
+                    animation: nav_menu_open $nav-animation-speed forwards;
+                }
+            }
+        }
+        .navbar-brand {
+            flex: 1;
+            margin-left: 0.5rem;
+            padding-top: 0.7rem;
+            img {
+                width: 180px;
+                transition: all $nav-animation-speed ease-in-out;
+                transform: translate3d(0,0,0);
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .playstation & {
+            background-color: $glass-playstation;
+        }
+        .xbox & {
+            background-color: $glass-xbox;
+        }
+        .nintendo & {
+            background-color: $glass-nintendo;
+        }
+        .master-race & {
+            background-color: $glass-master-race;
+        }
+        @include iPhone() {
+            height: 50px;
+            .navbar-brand {
+                //margin-left: 0;
+                img {
+                    max-width: 130px;
+                }
+            }
+            .nav-dropdown {
+                .dropdown-toggle {
+                    padding: 8px;
+                }
+            }
+        }
+        .container {
+            position: relative;
+            padding: 0;
+        }
+    }
+    .nav-search {
+        .nav-search-container {
+            background-color: darken($color-default, 30%);
+            border-radius: 100px;
+            display: inline-block;
+            padding: 5px;
+            vertical-align: top;
+            height: 35px;
+            margin: 20px 0;
+            right: -30px;
+            position: relative;
+            transition: height $nav-animation-speed ease-in-out;
+            .nav-search-field {
+                padding: 0 10px;
+                height: 25px;
+                transition: height $nav-animation-speed ease-in-out;
+                input {
+                    background-color: transparent;
+                    border: none;
+                    color: $color-white;
+                    line-height: 20px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: left;
+                    transition: line-height $nav-animation-speed ease-in-out;
+                    &::placeholder {
+                        color: fade-out($color-white, 0.5);
+                        font-weight: 400;
+                    }
+                    &:focus,
+                    &:active,
+                    &:active:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+            .playstation & {
+                background-color: darken($color-playstation, 30%);
+            }
+            .xbox & {
+                background-color: darken($color-xbox, 30%);
+            }
+            .nintendo & {
+                background-color: darken($color-nintendo, 30%);
+            }
+            .master-race & {
+                background-color: darken($color-master-race, 30%);
+            }
+        }
+        .nav-search-button {
+            width: 55px;
+            display: inline-block;
+            padding: 4px;
+            background-color: darken($color-default, 30%);
+            border-radius: 100%;
+            position: relative;
+            top: 10px;
+            transition: padding $nav-animation-speed ease-in-out;
+            .playstation & {
+                background-color: darken($color-playstation, 30%);
+            }
+            .xbox & {
+                background-color: darken($color-xbox, 30%);
+            }
+            .nintendo & {
+                background-color: darken($color-nintendo, 30%);
+            }
+            .master-race & {
+                background-color: darken($color-master-race, 30%);
+            }
+        }
+        @include iPhone() {
+            display: none;
+        }
+    }
+    @include desktopUp() {
+        &.power-up {
+            .navbar-jump {
+                height: 80px;
+            }
+            .nav-search {
+                .nav-search-container {
+                    padding: 5px;
+                    height: 40px;
+                    margin: 20px 0;
+                    right: -30px;
+                    .nav-search-field {
+                        padding: 0 10px;
+                        height: 30px;
+                        input {
+                            line-height: 30px;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .nav-search-button {
+                    width: 60px;
+                    display: inline-block;
+                    background-color: darken($color-default, 30%);
+                    border-radius: 100%;
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+    }
+    @include iPhone() {
+        .navbar-brand {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+@keyframes nav_menu_close {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+@keyframes nav_menu_open {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,52 @@
+.control-label {
+    font-family: 'Pixel';
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: fade-out($color-white, 0.3);
+    &.block {
+        display: block;
+    }
+}
+.gc-score-inner {
+    position: absolute;
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    top: -18px;
+    right: 0;
+    border-radius: 100%;
+    background-color: $color-background;
+    &::after {
+        display: block;
+        font-weight: 400;
+        font-size: 19px;
+        width: 36px;
+        height: 36px;
+        line-height: 34px;
+        border-radius: 100%;
+        text-align: center;
+        border: 2px solid $color-white;
+        background-color: $color-background;
+        content: "0";
+        color: $color-white;
+    }
+
+}
+.admin-score {
+    @each $score, $color in (
+            10 : $color-score-10,
+            9 : $color-score-9,
+            8 : $color-score-8,
+            7 : $color-score-7,
+            6 : $color-score-6,
+            5 : $color-score-5,
+            4 : $color-score-4,
+            3 : $color-score-3,
+            2 : $color-score-2,
+            1 : $color-score-1
+    ) {
+        @include admin_game_score($score, $color);
+    }
+}

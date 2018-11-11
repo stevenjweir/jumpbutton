@@ -1,0 +1,66 @@
+$color-white: #FFFFFF;
+$color-white-2: #c3c3c3;
+$color-light-gray: #797979;
+$color-gray: #515151;
+$color-charcoal: #222222;
+$color-black: #000000;
+
+$color-red: #E80505;
+$color-green: #16c72e;
+$color-yellow: #FFCD06;
+$color-live: #4ad680;
+
+$color-background: #1A1A1A;
+$color-navtray: fade-out($color-black, 0.5);
+$color-shadow: fade-out($color-black, 0.6);
+
+$color-default: #7100e5;
+$color-secondary: #12f7b4;
+
+
+$color-playstation: #333;
+$color-playstation-secondary: #0072ce;
+
+$color-xbox: #107C10;
+$color-xbox-secondary: #5DC21E;
+
+$color-nintendo: #FC453C;
+$color-nintendo-secondary: #1FBCE2;
+
+$color-master-race: #FED231;
+$color-master-race-secondary: $color-white;
+
+//Game Score Colors
+
+$color-score-10: #70F570;
+$color-score-9:  #81FBB8;
+$color-score-8:  #79F1A4;
+$color-score-7:  #0396FF;
+$color-score-6:  #7367F0;
+$color-score-5:  #623AA2;
+$color-score-4:  #9708CC;
+$color-score-3:  #F072B6;
+$color-score-2:  #FD6E6A;
+$color-score-1:  $color-red; //#E80505
+
+
+$color-heading: #79c07f;
+$color-subheading: #79b2c0  ;
+$color-text: #cf7878 ;
+$color-image: #7888cf  ;
+$color-video: #69bbe1 ;
+$color-link: #8d7a6c ;
+$color-quote: #f0c967 ;
+$color-gallery: #7c4343 ;
+
+
+// Theme Transparent Panel (Glass) colours
+$glass-default: fade-out(darken($color-default, 20%), 0.2);
+$glass-secondary: fade-out(darken($color-secondary, 20%), 0.2);
+$glass-playstation: fade-out(darken($color-playstation, 10%), 0.2);
+$glass-xbox: fade-out(darken($color-xbox, 10%), 0.2);
+$glass-nintendo: fade-out(darken($color-nintendo, 10%), 0.2);
+$glass-master-race: fade-out(darken($color-master-race, 10%), 0.2);
+
+$color-save: #46E0BA;
+$color-exit: #F6585C;

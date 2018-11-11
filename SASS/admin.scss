@@ -1,0 +1,16 @@
+//CHARACTER SET
+@charset "utf-8";
+
+@import
+    // Base Styling
+    "variables",
+    "colors",
+    "media",
+    "mixins",
+    //Admin Specific Styles
+    "admin/card",
+    "admin/common",
+    "admin/datepicker",
+    "admin/tables",
+    "admin/image_upload",
+    "../../../../node_modules/vue-datetime/dist/vue-datetime.min.css";

@@ -1,0 +1,50 @@
+.card {
+    border-radius: 0;
+    background-color: $glass-default;
+    padding: 40px 60px;
+    &:not(.admin-card) {
+        .control-label {
+            .master-race & {
+                color: fade-out($color-charcoal, 0.3);
+            }
+        }
+    }
+    .playstation & {
+        background-color: $glass-playstation;
+    }
+    .xbox & {
+        background-color: $glass-xbox;
+    }
+    .nintendo & {
+        background-color: $glass-nintendo;
+    }
+    .master-race & {
+        background-color: $glass-master-race;
+        color: $color-charcoal;
+    }
+    &.admin-card {
+        background-color: fade_out($color-black, 0.3) !important;
+        transition: all .2s ease-in-out;
+        &.live {
+            border: 2px solid fade_out($color-live, 0.5);
+            @include iPhone() {
+                width: 100%;
+            }
+
+        }
+        .control-label {
+            color: fade-out($color-white, 0.3);
+        }
+        .form-control {
+            color: $color-white !important;
+            &::placeholder {
+                color: fade-out($color-white, 0.3) !important;
+            }
+        }
+        padding: 40px !important;
+        @include iPhone() {
+            width: 84%;
+            padding: 15px !important;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.vdatetime {
+    &-popup {
+        &__header {
+            background: $color-default;
+            .playstation & {
+                background: $color-playstation-secondary;
+            }
+            .xbox & {
+                background: $color-xbox-secondary;
+            }
+            .nintendo & {
+                background: $color-nintendo-secondary;
+            }
+            .master-race & {
+                background: $color-master-race;
+                color: $color-charcoal;
+            }
+        }
+        &__body {
+            .vdatetime-calendar {
+                .vdatetime-calendar__month {
+                    .vdatetime-calendar__month__day--selected>span>span {
+                        background: $color-default;
+                        .playstation & {
+                            background: $color-playstation-secondary;
+                        }
+                        .xbox & {
+                            background: $color-xbox-secondary;
+                        }
+                        .nintendo & {
+                            background: $color-nintendo-secondary;
+                        }
+                        .master-race & {
+                            background: $color-master-race;
+                            color: $color-charcoal;
+                        }
+                    }
+                }
+            }
+            .vdatetime-time-picker {
+                &__item--selected {
+                    color: $color-default;
+                    .playstation & {
+                        color: $color-playstation-secondary;
+                    }
+                    .xbox & {
+                        color: $color-xbox-secondary;
+                    }
+                    .nintendo & {
+                        color: $color-nintendo-secondary;
+                    }
+                    .master-race & {
+                        color: $color-master-race;
+                    }
+                }
+            }
+        }
+        &__actions {
+            &__button {
+                color: $color-default;
+                .playstation & {
+                    color: $color-playstation-secondary;
+                }
+                .xbox & {
+                    color: $color-xbox-secondary;
+                }
+                .nintendo & {
+                    color: $color-nintendo-secondary;
+                }
+                .master-race & {
+                    color: $color-master-race;
+                }
+            }
+        }
+    }
+}

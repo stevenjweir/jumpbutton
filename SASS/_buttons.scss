@@ -1,0 +1,645 @@
+.the-jump-button {
+    display: block;
+    width: 100%;
+    border-radius: 1000px;
+    padding-top: 100%;
+    background-color: $color-default;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 0 0 $color-black;
+    outline: none;
+    .playstation & {
+        background-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        background-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        background-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        background-color: $color-master-race-secondary;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 8%;
+        left: 2%;
+        display: block;
+        width: 96%;
+        bottom: 2%;
+        background: rgba(0, 0, 0, 0.1);
+        background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+        background: linear-gradient(to top, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 100%);
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+        border-radius: 100%;
+    }
+    .jmp-btn-rflct1 {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        width: 94%;
+        left: 3%;
+        bottom: 3%;
+        box-shadow: 0 26px 0 -20px rgba(255, 255, 255, 0.6) inset;
+        border-radius: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(-25deg);
+    }
+    .jmp-btn-rflct2 {
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        width: 86%;
+        left: 7%;
+        bottom: 7%;
+        box-shadow: 0 18px 0 -15px rgba(255, 255, 255, 0.4) inset;
+        border-radius: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(-205deg);
+    }
+    .jmp-btn-shdw1 {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 96%;
+        left: 2%;
+        bottom: 2%;
+        box-shadow: 0 35px 0 -30px rgba(0, 0, 0, 0.6) inset;
+        border-radius: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(-125deg);
+    }
+    .jmp-btn-rim {
+        background-color: $color-background;
+        width: 70%;
+        position: absolute;
+        top: 15%;
+        bottom: 15%;
+        left: 15%;
+        right: 15%;
+        border-radius: 1000px;
+        overflow: hidden;
+        padding: 8px;
+        box-shadow: 0 0 20px 0 $color-black inset;
+        .jmp-btn-cont {
+            position: relative;
+            .jmp-btn {
+                background-color: lighten($color-default, 10%);
+                .playstation & {
+                    background-color: lighten($color-playstation-secondary, 10%);
+                }
+                .xbox & {
+                    background-color: lighten($color-xbox-secondary, 10%);
+                }
+                .nintendo & {
+                    background-color: lighten($color-nintendo-secondary, 10%);
+                }
+                .master-race & {
+                    background-color: lighten($color-master-race-secondary, 10%);
+                }
+                width: 100%;
+                padding: 0;
+                padding-top: 100%;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 1000px;
+                border: none;
+                outline: none;
+                overflow: hidden;
+                transition: all 0.1s ease-in-out;
+                text-decoraton: none;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    display: block;
+                    width: 90%;
+                    bottom: 5%;
+                    background: rgba(0, 0, 0, 0.1);
+                    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+                    background: linear-gradient(to top, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 100%);
+                    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+                    border-radius: 100%;
+                }
+                img {
+                    width: 60%;
+                    position: absolute;
+                    top: 20%;
+                    left: 20%;
+                    right: 20%;
+                    bottom: 20%;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 5%;
+                    left: 15%;
+                    display: block;
+                    width: 70%;
+                    top: 40%;
+                    background: rgba(255, 255, 255, 0.1);
+                    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+                    background: linear-gradient(to top, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+                    border-radius: 70% 70% 90% 90%;
+                }
+                &:hover,
+                &:focus,
+                &:active,
+                &:focus:active {
+                    outline: none;
+                    border: none;
+                    text-decoration: none;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &[disabled] {
+        opacity: 0.3;
+    }
+    &:hover {
+        outline: none;
+        cursor: pointer;
+        @include desktopUp() {
+            .jmp-btn-rflct1 {
+                transform: rotate(-45deg);
+                opacity: 0.4;
+            }
+            .jmp-btn-rflct2 {
+                transform: rotate(-225deg);
+                opacity: 0.4;
+            }
+            .jmp-btn-shdw1 {
+                transform: rotate(-145deg);
+                opacity: 0.4;
+            }
+            .jmp-btn-shdw2 {
+                transform: rotate(-225deg);
+                opacity: 0.4;
+            }
+            .jmp-btn {
+                &:active {
+                    cursor: pointer;
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    &.the-jump-button-sml {
+        box-shadow: 0 3px 0 0 $color-black;
+        .jmp-btn-rflct1 {
+            box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.5) inset;
+        }
+        .jmp-btn-rflct2 {
+            box-shadow: 0 3px 0 -2px rgba(255, 255, 255, 0.2) inset;
+        }
+        .jmp-btn-shdw1 {
+            box-shadow: 0 2px 0 -1px rgba(0, 0, 0, 0.6) inset;
+        }
+        .jmp-btn-rim {
+            padding: 3px;
+        }
+    }
+}
+
+.jmp-btn-frame {
+    width: 70px;
+    padding: 4px;
+    background-color: $color-background;
+    border-radius: 100%;
+    position: absolute !important;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all $nav-animation-speed ease-in-out;
+    transform: translate3d(0,0,0);
+    &.article-back-btn {
+        left: 10px;
+        right: unset;
+        top: unset;
+        bottom: -40px;
+        z-index: 1;
+        width: 60px;
+    }
+    @include iPhone() {
+        width: 60px;
+        left: inherit;
+        right: 15px;
+    }
+    @include desktopUp() {
+        .power-up & {
+            width: 100px;
+            padding: 4px;
+        }
+    }
+}
+
+.btn {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: $color-white;
+    color: $color-charcoal;
+    border: none;
+    box-shadow: 0px 2px 10px 0px $color-shadow;
+    position: relative;
+    transition: all $btn-animation-speed ease-in-out;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    padding: 5px 25px;
+    &.btn-icon {
+        padding: 0;
+    }
+    i {
+        font-size: 30px;
+    }
+    &:focus {
+        border: none !important;
+        outline: none !important;;
+        box-shadow: none !important;;
+    }
+    &:hover,
+    &:active {
+        background-color: lighten($color-white, 10%);
+        color: $color-charcoal;
+        transform: scale(1.1);
+    }
+    &.btn-sm {
+        min-width: 30px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 5px;
+    }
+    &.btn-lg {
+        min-width: 60px;
+        height: 60px;
+        line-height: 50px;
+        border-radius: 30px;
+        font-size: 40px;
+        i {
+            font-size: 30px;
+        }
+    }
+    &.btn-primary {
+        background-color: $color-secondary;
+        color: $color-charcoal !important;;
+        &:active {
+            background-color: darken($color-secondary, 10%) !important;
+        }
+        .playstation & {
+            background-color: $color-playstation-secondary;
+            color: $color-white !important;;
+            i {
+                color: $color-white !important;;
+            }
+            &:active {
+                background-color: darken($color-playstation-secondary, 10%) !important;;
+            }
+        }
+        .xbox & {
+            background-color: $color-xbox-secondary !important;;
+            &:active {
+                background-color: darken($color-xbox-secondary, 10%) !important;;
+            }
+        }
+        .nintendo & {
+            background-color: $color-nintendo-secondary;
+            &:active {
+                background-color: darken($color-nintendo-secondary, 10%) !important;;
+            }
+        }
+        .master-race & {
+            background-color: $color-master-race;
+            color: $color-charcoal !important;;
+            &:active {
+                background-color: darken($color-master-race, 10%) !important;;
+            }
+        }
+    }
+    &.btn-secondary {
+        background-color: $color-secondary !important;;
+        color: $color-charcoal;
+        .playstation & {
+            background-color: $color-playstation-secondary !important;;
+        }
+        .xbox & {
+            background-color: $color-xbox-secondary !important;;
+        }
+        .nintendo & {
+            background-color: $color-nintendo-secondary !important;;
+        }
+        .master-race & {
+            background-color: $color-master-race-secondary !important;;
+        }
+    }
+    &.btn-success {
+
+    }
+    &.btn-danger {
+
+    }
+    &.btn-warning {
+
+    }
+    &.btn-info {
+
+    }
+    &.btn-light {
+
+    }
+    &.btn-dark {
+
+    }
+    &.btn-process-slug {
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        background-color: $color-secondary;
+        i {
+            font-size: 18px;
+            color: $color-white;
+            line-height: 20px;
+        }
+        .playstation & {
+            background-color: $color-playstation-secondary;
+        }
+        .xbox & {
+            background-color: $color-xbox-secondary;
+        }
+        .nintendo & {
+            background-color: $color-nintendo-secondary;
+        }
+        .master-race & {
+            background-color: $color-master-race-secondary;
+            i {
+                color: $color-charcoal;
+            }
+        }
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:active:focus {
+            top: 0;
+            background-color: fade_out($color-white, 0.6) !important;
+            .playstation & {
+                background-color: fade_out($color-playstation-secondary, 0.6) !important;
+            }
+            .xbox & {
+                background-color: fade_out($color-xbox-secondary, 0.6) !important;
+            }
+            .nintendo & {
+                background-color: fade_out($color-nintendo-secondary, 0.6) !important;
+            }
+            .master-race & {
+                background-color: fade_out($color-master-race-secondary, 0.6) !important;
+                i {
+                    color: $color-charcoal;
+                }
+            }
+        }
+    }
+}
+
+.dropdown {
+    .dropdown-menu {
+        font-size: 12px;
+        text-align: left;
+        background-color: $glass-default;
+        .playstation & {
+            background-color: $glass-playstation;
+            a:hover {
+                color: $color-playstation;
+            }
+        }
+        .xbox & {
+            background-color: $glass-xbox;
+            a:hover {
+                color: $color-xbox;
+            }
+        }
+        .nintendo & {
+            background-color: $glass-nintendo;
+            a:hover {
+                color: $color-nintendo;
+            }
+        }
+        .master-race & {
+            background-color: $glass-master-race;
+            a {
+                color: $color-charcoal;
+                &:hover {
+                    color: $color-charcoal;
+                }
+            }
+        }
+        .dropdown-item {
+            background-color: $glass-default;
+            .playstation & {
+                background-color: $glass-playstation;
+                color: $color-playstation-secondary;
+                a {
+                    color: $color-playstation-secondary;
+                }
+            }
+            .xbox & {
+                background-color: $glass-xbox;
+                color: $color-white;
+                a {
+                    color: $color-white;
+                }
+            }
+            .nintendo & {
+                background-color: $glass-nintendo;
+                color: $color-white;
+                a {
+                    color: $color-white;
+                }
+            }
+            .master-race & {
+                background-color: $glass-master-race;
+                color: $color-charcoal;
+                a {
+                    color: $color-charcoal;
+                }
+            }
+            &:hover {
+                background-color: $color-secondary;
+                color: $color-charcoal;
+                a {
+                    color: $color-charcoal;
+                }
+                .playstation & {
+                    background-color: $color-playstation-secondary;
+                    color: $color-white;
+                    a {
+                        color: $color-white;
+                    }
+                }
+                .xbox & {
+                    background-color: $color-xbox-secondary;
+                    color: $color-white;
+                    a {
+                        color: $color-white;
+                    }
+                }
+                .nintendo & {
+                    background-color: $color-nintendo-secondary;
+                    color: $color-charcoal;
+                    a {
+                        color: $color-charcoal;
+                    }
+                }
+                .master-race & {
+                    background-color: $color-master-race-secondary;
+                    color: $color-charcoal;
+                    a {
+                        color: $color-charcoal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gamepad-buttons {
+    background-color: $glass-default;
+    border: 2px solid $color-default;
+    position: fixed;
+    bottom: 20px;
+    right: -20px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    width: 120px;
+    height: 120px;
+    border-radius: 200px;
+    overflow: hidden;
+    padding: 5px;
+    animation: savepanel-slide-in $kard-animation-speed forwards;
+    .playstation & {
+        background-color: $glass-playstation;
+        border-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        background-color: $glass-xbox;
+        border-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        background-color: $glass-nintendo;
+        border-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        background-color: $glass-master-race;
+        border-color: $color-master-race-secondary;
+    }
+    @include iPhone() {
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    .btn-wrapper {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        @include iPhone() {
+            width: auto;
+            height: auto;
+        }
+    }
+    .btn {
+        width: 40px;
+        height: 40px;
+        line-height: 44px;
+        border-radius: 60px;
+        font-size: 21px;
+        padding: 0;
+        display: inline-block;
+        position: absolute;
+        border: 2px solid $color-gray;
+        background-color: $color-charcoal !important;
+        color: $color-gray;
+        margin: 0;
+        i {
+            font-size: 24px;
+            line-height: 34px;
+        }
+        &.back-to-top {
+            border-color: $color-master-race !important;
+            color: $color-master-race !important;
+            top: 0;
+            left: calc( 55px - 20px);
+            bottom: inherit;
+            opacity: 0.3;
+            &.on {
+                opacity: 1.0;
+            }
+        }
+        &.cancel-btn,
+        &.back-btn {
+            border-color: $color-exit !important;
+            color: $color-exit !important;
+            top: calc( 55px - 20px);
+            left: 0;
+            right: inherit;
+        }
+        &.save-btn,
+        &.share-btn {
+            border-color: $color-save !important;
+            color: $color-save !important;
+            bottom: 0;
+            left: calc( 55px - 20px);
+            top: inherit;
+        }
+        &:hover {
+            z-index:+1;
+            &.save-btn,
+            &.cancel-btn {
+                //
+            }
+        }
+        &:focus,
+        &:active:focus {
+            border: 2px solid !important;
+        }
+        &:active {
+            background-color: fade_out($color-white, 0.8) !important;
+            border: 4px solid !important;
+        }
+    }
+    &:hover {
+        opacity: 1;
+    }
+    @include iPhone() {
+        right: -8px;
+        opacity: 1;
+        .btn {
+            opacity: 1;
+            position: initial;
+            display: block;
+            &:not(last-of-type) {
+                margin-bottom: 10px;
+            }
+            &.save-btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

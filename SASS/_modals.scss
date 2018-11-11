@@ -1,0 +1,63 @@
+.modal {
+    .modal-dialog {
+        margin: 25vh auto;
+        max-width: 50vw;
+        .modal-content {
+            border-radius: 0;
+            background-color: $glass-default;
+            .playstation & {
+                background-color: $glass-playstation;
+            }
+            .xbox & {
+                background-color: $glass-xbox;
+            }
+            .nintendo & {
+                background-color: $glass-nintendo;
+            }
+            .master-race & {
+                background-color: $glass-master-race;
+                color: $color-charcoal;
+            }
+            .modal-body {
+                padding: 40px;
+                .bootbox-body {
+
+                }
+                .bootbox-close-button {
+                    position: absolute;
+                    top: 10px;
+                    right: 6px;
+                    text-shadow: none;
+                    color: $color-white;
+                    opacity: 0.3;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    &:focus,
+                    &:active,
+                    &:active:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .modal-footer {
+                border-top: none;
+                justify-content: center;
+                .btn {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    @include iPhone() {
+        .modal-dialog {
+            max-width: 90vw;
+        }
+    }
+}
+.modal-backdrop {
+    &.show {
+        opacity: 0.9;
+    }
+    background-color: $glass-default;
+}

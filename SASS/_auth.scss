@@ -1,0 +1,95 @@
+.login-page {
+    .row {
+        align-items: center;
+        justify-content: center;
+    }
+    .form-control {
+        background-color: fade-out($color-black, 0.9);
+        color: $color-white;
+        outline: none;
+        border: 1px dotted fade-out($color-white, 0.8);
+        box-shadow: none;
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 400;
+        border-radius: 0;
+        resize: none;
+        min-height: 42px;
+        &:hover {
+            border: 1px dotted fade-out($color-white, 0.5);
+        }
+        &:focus,
+        &:active,
+        &:focus:active {
+            background-color: fade-out($color-black, 0.6);
+            color: $color-white;
+            box-shadow: none;
+            outline: none;
+            border: 1px dotted fade-out($color-white, 0.5);
+        }
+        &::placeholder {
+            color: fade-out($color-white, 0.3);
+        }
+        .master-race & {
+            color: $color-charcoal;
+            &::placeholder {
+                color: fade-out($color-charcoal, 0.3);
+            }
+        }
+        &.title-input {
+            font-size: 56px;
+            font-weight: 500;
+            @include iPhone() {
+                font-size: 38px;
+            }
+        }
+        &.admin-notes {
+            font-size: 12px;
+        }
+    }
+    .control-label {
+        display: block;
+        font-family: 'Pixel';
+        font-smooth: never;
+        -webkit-font-smoothing : none;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: fade-out($color-white, 0.3);
+        text-align: center;
+        &::before {
+            content: "::::  ";
+        }
+        &::after {
+            content: "  ::::";
+        }
+    }
+}
+.login-card {
+    text-align: center;
+    padding: 15px;
+    min-width: 320px;
+    animation: article-slide-in $kard-animation-speed forwards;
+    .card-header,
+    .card-footer {
+        background-color: transparent;
+        border: none;
+    }
+    .card-header {
+        font-weight: normal;
+        color: $color-secondary;
+        font-size: 32px;
+        font-family: 'computer';
+        font-smooth: never;
+        text-transform: uppercase;
+        -webkit-font-smoothing: none;
+    }
+    .card-body {
+        .btn-lg {
+            margin: 0 auto;
+            animation: button-pulse .5s forwards;
+        }
+    }
+    .card-footer {
+        font-size: 11px;
+    }
+}

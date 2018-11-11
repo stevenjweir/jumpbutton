@@ -1,0 +1,167 @@
+.trumbowyg-box {
+    margin: 0;
+    min-height: 150px;
+    textarea {
+        display: none;
+    }
+    svg {
+        fill: $color-white;
+        .master-race & {
+            fill: $color-charcoal;
+        }
+    }
+    .trumbowyg-button-pane {
+        background-color: $glass-default;
+        .playstation & {
+            background-color: $glass-playstation;
+        }
+        .xbox & {
+            background-color: $glass-xbox;
+        }
+        .nintendo & {
+            background-color: $glass-nintendo;
+        }
+        .master-race & {
+            background-color: $glass-master-race;
+            color: $color-charcoal;
+        }
+        .trumbowyg-button-group {
+            &::before {
+
+            }
+            button {
+                &:not(.trumbowyg-disable):hover {
+                    background-color: $color-default;
+                    .playstation & {
+                        background-color: $color-playstation;
+                    }
+                    .xbox & {
+                        background-color: $color-xbox;
+                    }
+                    .nintendo & {
+                        background-color: $color-nintendo;
+                    }
+                    .master-race & {
+                        background-color: $color-master-race;
+                    }
+                }
+                &.trumbowyg-active-button {
+
+                }
+                &.trumbowyg-active {
+                    background-color: $color-secondary;
+                    .playstation & {
+                        background-color: $color-playstation-secondary;
+                    }
+                    .xbox & {
+                        background-color: $color-xbox-secondary;
+                    }
+                    .nintendo & {
+                        background-color: $color-nintendo-secondary;
+                    }
+                    .master-race & {
+                        background-color: $color-master-race-secondary;
+                    }
+                }
+            }
+        }
+    }
+    .trumbowyg-editor {
+        padding: 10px;
+        border: 1px solid transparent;
+        min-height: 150px;
+        text-align: initial;
+        &:focus {
+            border: 1px solid $color-default;
+            .playstation & {
+                //border-color: $color-playstation;
+                border-color: $color-black;
+            }
+            .xbox & {
+                //border-color: $color-xbox;
+                border-color: $color-black;
+
+            }
+            .nintendo & {
+                //border-color: $color-nintendo;
+                border-color: $color-black;
+            }
+            .master-race & {
+                //border-color: $color-master-race;
+                border-color: $color-black;
+            }
+        }
+    }
+    &.trumbowyg-editor-visible {
+        .trumbowyg-textarea {
+            height: 0 !important;
+            border: none !important;
+        }
+    }
+}
+.trumbowyg-modal-box {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 0;
+    form {
+        padding-bottom: 62px;
+    }
+    label {
+        background: transparent;
+        padding: 0;
+        border: 0;
+        font-weight: 700;
+        color: $color-black;
+        border-radius: 0;
+        .trumbowyg-input-infos {
+            line-height: 27px;
+            span {
+                @extend label;
+                width: 54px;
+                line-height: 16px;
+                padding: 5px 10px;
+                background: fade-out($color-black, 0.6);
+                border-radius: 5px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .trumbowyg-msg-error {
+                background-color: $color-charcoal !important;
+                color: $color-white !important;
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+        input {
+            font-size: 12px;
+            max-width: 10000px;
+            width: 80%;
+            &:focus {
+                background-color: $color-white;
+                border-color: $color-charcoal;
+            }
+            &.trumbowyg-input-error {
+                border: 1px solid $color-charcoal !important;
+            }
+        }
+    }
+    .trumbowyg-modal {
+        top: 16px !important;
+    }
+    .trumbowyg-modal-title {
+        background-color: $color-charcoal;
+        color: $color-white;
+        border-bottom: 1px solid $color-red;
+        padding: 16px;
+        font-size: 22px;
+        font-weight: 800;
+        text-align: left;
+    }
+    .trumbowyg-modal-submit {
+        //
+    }
+    .trumbowyg-modal-reset {
+        //
+        right: 110px !important;
+    }
+}

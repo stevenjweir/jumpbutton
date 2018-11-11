@@ -1,0 +1,39 @@
+.alert {
+    display: inline-block;
+    background-color: $color-white;
+    border-radius: 1000px;
+    font-size: 12px;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.1);
+    pointer-events: none;
+    border: none;
+    color: $color-default;
+    max-width: 400px;
+    .playstation & {
+        color: $color-playstation-secondary;
+    }
+    .xbox & {
+        color: $color-xbox;
+    }
+    .nintendo & {
+        color: $color-nintendo;
+    }
+    .master-race & {
+        color: darken($color-master-race, 20%);
+    }
+    &-container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1040;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 1%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.25) 1%,rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.25) 1%,rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00000000',GradientType=0 );
+        padding: 20px;
+        text-align: center;
+        animation: alert-container-slide 3s 1 forwards;
+        pointer-events: none;
+    }
+}

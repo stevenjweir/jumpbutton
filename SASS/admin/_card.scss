@@ -1,0 +1,37 @@
+.card {
+    background-color: fade-out($color-black, 0.5);
+    margin-bottom: 30px;
+    padding: 15px;
+    .card-body {
+        font-size: 14px;
+    }
+    a {
+        color: $color-default;
+        .playstation & {
+            color: $color-playstation;
+        }
+        .xbox & {
+            color: $color-xbox;
+        }
+        .nintendo & {
+            color: $color-nintendo;
+        }
+        .master-race & {
+           color: $color-master-race;
+        }
+    }
+
+}
+
+.js-delete-block {
+    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.stats-number {
+    padding: 0 0 15px 0;
+    font-size: 30px !important;
+    line-height: 30px;
+}

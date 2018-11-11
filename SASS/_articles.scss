@@ -1,0 +1,1305 @@
+.article-posts {
+    padding: 0;
+    a {
+        padding: 50px 0;
+        border-bottom: 1px solid fade-out($color-white, 0.9);
+        text-decoration: none;
+        &.homepage-article {
+            width: 100%;
+            transition: all .3s ease-in-out;
+            display: block;
+            animation: articlepost-slide-in $kard-animation-speed forwards;
+            .image-container {
+                -webkit-perspective: 50em;
+                -moz-perspective: 50em;
+                perspective: 50em;
+                .homepage-article-image {
+                    position: relative;
+                    width: 100%;
+                    padding-top: $card-ratio;
+                    background-color: fade-out($color-white, 0.8);
+                    box-shadow: 2px 2px 10px 0px $color-black;
+                    border: 2px solid $color-charcoal;
+                    border-radius: 0px;
+                    overflow: hidden;
+                    @include desktopUp() {
+                        webkit-animation: tilt-in $kard-animation-speed alternate forwards;
+                        -moz-animation: tilt-in $kard-animation-speed alternate forwards;
+                        animation: tilt-in $kard-animation-speed alternate forwards;
+                    }
+                    .h-a-i-bkgd {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-position: center center;
+                        background-size: cover;
+                    }
+                }
+            }
+            .homepage-article-date {
+                font-size: 14px;
+                color: fade-out($color-white, 0.5);
+                width: 100%;
+                padding: 5px 0;
+                font-weight: 400;
+                text-align: left;
+                transition: all .3s ease-in-out;
+            }
+            .homepage-article-detail {
+                padding-left: 30px;
+                h2 {
+                    transition: all .3s ease-in-out;
+                    font-size: 22px;
+                    color: $color-white;
+                    margin-bottom: 20px;
+                    line-height: 30px;
+                    max-height: 60px;
+                    overflow: hidden;
+                }
+                p {
+                    font-size: 18px;
+                    color: $color-white;
+                    line-height: 26px;
+                    max-height: 78px;
+                    overflow: hidden;
+                }
+            }
+            &:hover,
+            &:focus {
+                border-color: $color-secondary;
+                outline: none;
+                .homepage-article-image {
+                    @include desktopUp() {
+                        -webkit-animation: tilt-out $kard-animation-speed alternate forwards;
+                        -moz-animation: tilt-out $kard-animation-speed alternate forwards;
+                        animation: tilt-out $kard-animation-speed alternate forwards;
+                    }
+                    border-color: $color-secondary;
+                    .playstation & {
+                        border-color: $color-playstation-secondary;
+                    }
+                    .xbox & {
+                        border-color: $color-xbox-secondary;
+                    }
+                    .nintendo & {
+                        border-color: $color-nintendo-secondary;
+                    }
+                    .master-race & {
+                        border-color: $color-master-race;
+                    }
+                }
+                .homepage-article-date {
+                    color: $color-secondary;
+                    .playstation & {
+                        color: $color-playstation-secondary;
+                    }
+                    .xbox & {
+                        color: $color-xbox-secondary;
+                    }
+                    .nintendo & {
+                        color: $color-nintendo-secondary;
+                    }
+                    .master-race & {
+                        color: $color-master-race;
+                    }
+                }
+                .homepage-article-detail {
+                    h2 {
+                        color: $color-secondary;
+                    }
+                }
+                .playstation & {
+                    border-color: $color-playstation-secondary;
+                    .homepage-article-detail {
+                        h2 {
+                            color: $color-playstation-secondary;
+                        }
+                    }
+                }
+                .xbox & {
+                    border-color: $color-xbox-secondary;
+                    .homepage-article-detail {
+                        h2 {
+                            color: $color-xbox-secondary;
+                        }
+                    }
+                }
+                .nintendo & {
+                    border-color: $color-nintendo-secondary;
+                    .homepage-article-detail {
+                        h2 {
+                            color: $color-nintendo-secondary;
+                        }
+                    }
+                }
+                .master-race & {
+                    border-color: $color-master-race;
+                    .homepage-article-detail {
+                        h2 {
+                            color: $color-master-race;
+                        }
+                    }
+                }
+            }
+            @include iPhone() {
+                padding: 0 0 20px 0;
+                &:not(:first-of-type){
+                    padding: 20px 0;
+                }
+                border-color: $color-secondary;
+                .playstation & {
+                    border-color: $color-playstation-secondary;
+                }
+                .xbox & {
+                    border-color: $color-xbox-secondary;
+                }
+                .nintendo & {
+                    border-color: $color-nintendo-secondary;
+                }
+                .master-race & {
+                    border-color: $color-master-race;
+                }
+                .homepage-article-detail {
+                    padding-left: 0;
+                    h2 {
+                        font-size: 24px;
+                        margin-bottom: 10px;
+                        color: $color-secondary;
+                        line-height: 34px;
+                        max-height: 68px;
+                        .playstation & {
+                            color: $color-playstation-secondary;
+                        }
+                        .xbox & {
+                            color: $color-xbox-secondary;
+                        }
+                        .nintendo & {
+                            color: $color-nintendo-secondary;
+                        }
+                        .master-race & {
+                            color: $color-master-race;
+                        }
+                    }
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        color: fade-out($color-white, 0.4);
+                        font-size: 14px;
+                        line-height: 20px;
+                        max-height: 60px;
+                    }
+                }
+                .homepage-article-date {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.article-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: calc(100vh - 4px);
+    border-bottom: 4px solid darken($color-default, 20%);
+    overflow: hidden;
+    &-label {
+        display: none;
+    }
+    &-img {
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom:0;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all $article-header-animation-speed ease-in-out;
+        transform: translate3d(0,0,0);
+        &.blur_me {
+            filter: blur(10px);
+            @include ie() {
+                opacity: 0.5;
+            }
+        }
+    }
+    .playstation & {
+        border-color: darken($color-playstation, 20%);
+    }
+    .xbox & {
+        border-color: darken($color-xbox, 20%);
+    }
+    .nintendo & {
+        border-color: darken($color-nintendo, 20%);
+    }
+    .master-race & {
+        border-color: darken($color-master-race, 20%);
+    }
+    .image-uploader {
+        width: 100%;
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        &-btn {
+            top: 90px;
+            @include iPhone() {
+                top: 10px;
+            }
+        }
+        &-imgs {
+            flex: 1 1 100%;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img {
+                width: 100%;
+                transition: none;
+            }
+            img + img {
+                flex: 0 0 auto;
+                min-height: 100%;
+                min-width: 100%;
+                width: 100%;
+                transition: none;
+            }
+            .cropping & {
+                top: 46px;
+            }
+        }
+        &-spinner {
+            right: 10px;
+            top: 90px;
+        }
+        &-complete {
+            right: 10px;
+            top: 140px;
+        }
+        &.cropping {
+            top: 0;
+            z-index: 1040;
+        }
+    }
+    @include iPhone() {
+        height: 60vh;
+        flex-direction: row;
+        img {
+            height: 100%;
+            max-width: unset;
+        }
+    }
+    //Uploader
+    .article-builder & {
+        height: auto;
+        @include upToIpad() {
+            &-label {
+                display: block;
+            }
+            position: relative;
+            margin-bottom: 30px;
+            .image-uploader {
+                &-spinner {
+                    right: 10px;
+                    top: 10px;
+                }
+                &-complete {
+                    right: 10px;
+                    top: 60px;
+                }
+            }
+        }
+    }
+ }
+.article {
+    &-builder {
+        &-saving {
+            display: none;
+            position: fixed;
+            top:10px;
+            right: 10px;
+            color: $color-white;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 10000;
+            &.is-saving {
+                display: block;
+            }
+        }
+    }
+    position: relative;
+    animation: article-slide-in $kard-animation-speed forwards;
+    .admin-card {
+        .control-label {
+            text-align: left;
+        }
+    }
+    .control-label {
+        font-family: 'Pixel';
+        font-smooth: never;
+        -webkit-font-smoothing : none;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: fade-out($color-white, 0.3);
+        text-align: center;
+    }
+    .form-control {
+        background-color: fade-out($color-black, 0.9);
+        color: $color-white;
+        outline: none;
+        border: 1px dotted fade-out($color-white, 0.8);
+        box-shadow: none;
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 400;
+        border-radius: 0;
+        resize: none;
+        min-height: 42px;
+        &:hover {
+            border: 1px dotted fade-out($color-white, 0.5);
+        }
+        &:focus,
+        &:active,
+        &:focus:active {
+            box-shadow: none;
+            outline: none;
+            border: 1px dotted fade-out($color-white, 0.5);
+        }
+        &::placeholder {
+            color: fade-out($color-white, 0.3);
+        }
+        .master-race & {
+            color: $color-charcoal;
+            &::placeholder {
+                color: fade-out($color-charcoal, 0.3);
+            }
+        }
+        &.title-input {
+            font-size: 56px;
+            font-weight: 500;
+            @include iPhone() {
+                font-size: 38px;
+            }
+        }
+        &.admin-notes {
+            font-size: 12px;
+        }
+    }
+    .selectized + .selectize-control {
+        .selectize-input {
+            background-color: fade-out($color-black, 0.9);
+            color: $color-white;
+            outline: none;
+            border: 1px dotted fade-out($color-white, 0.8);
+            box-shadow: none;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 0;
+            min-height: 42px;
+            .item {
+                .master-race & {
+                    color: $color-charcoal;
+                }
+            }
+            .remove-single {
+                color: $color-secondary;
+                right: 5px;
+                top: -6px;
+                &:hover {
+                    transform: scale(1.1);
+                    text-decoration: none;
+                }
+                .playstation & {
+                    color: $color-playstation-secondary;
+                }
+                .xbox & {
+                    color: $color-xbox-secondary;
+                }
+                .nintendo & {
+                    color: $color-nintendo-secondary;
+                }
+                .master-race & {
+                    color: $color-master-race-secondary;
+                }
+                &:focus,
+                &:active,
+                &:focus:active {
+                    text-decoration: none;
+                    color: $color-white;
+                }
+            }
+            input {
+                display: none !important;
+            }
+            &:hover {
+                border: 1px dotted fade-out($color-white, 0.5);
+            }
+            &.dropdown-active {
+                box-shadow: none;
+                outline: none;
+                border: 1px solid fade-out($color-white, 0.5);
+            }
+            &::placeholder {
+                color: fade-out($color-white, 0.3);
+            }
+            &::after {
+                display: none;
+            }
+        }
+        .selectize-dropdown {
+            background-color: fade-out($color-black, 0.9);
+            color: $color-white;
+            outline: none;
+            border: 1px solid fade-out($color-white, 0.5);
+            border-radius: 0;
+            .selectize-dropdown-content {
+                padding: 0;
+            }
+            .option {
+                &.selected {
+
+                }
+                &.active {
+                    background-color: $color-white;
+                    color: $color-charcoal;
+                }
+            }
+        }
+    }
+    &-video-code {
+        background: $color-black !important;
+        color: $color-live !important;
+        font-size: 12px !important;
+        &::placeholder {
+            color: darken($color-live, 10%) !important;
+        }
+    }
+    .game-card-container {
+        width: 100%;
+        text-align: right;
+        margin-top: 30px;
+        min-height: 220px;
+    }
+    &-controls {
+        padding: 10px 0;
+        display: flex;
+        .art-cont-left {
+            width: 50%;
+            text-align: left;
+            position: relative;
+        }
+        .art-cont-right {
+            width: 50%;
+            text-align: right;
+            position: relative;
+            .btn {
+                display: inline-block;
+            }
+        }
+    }
+    &-title {
+        position: relative;
+        background-color: $glass-default;
+        padding: 40px 60px;
+        .control-label {
+            text-align: left;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 500;
+            .form-control {
+                font-size: 56px;
+                font-weight: 500;
+                line-height: 70px;
+            }
+        }
+        @include iPhone() {
+            h1 {
+                font-size: 26px;
+                font-weight: 500;
+                .form-control {
+                    font-size: 26px;
+                    font-weight: 500;
+                    line-height: 30px;
+                }
+            }
+        }
+        .ac-ti-published {
+            padding: 5px 0;
+            font-weight: 400;
+            font-size: 14px;
+            color: $color-white;
+            padding: 3px 0;
+            .ac-ti-key-detail {
+                color: fade-out($color-white, 0.4);
+            }
+            @include iPhone() {
+                font-size: 11px;
+            }
+        }
+        .playstation & {
+            background-color: $glass-playstation;
+        }
+        .xbox & {
+            background-color: $glass-xbox;
+        }
+        .nintendo & {
+            background-color: $glass-nintendo;
+        }
+        .master-race & {
+            background-color: $glass-master-race;
+            color: $color-charcoal;
+            .control-label {
+                color: $color-charcoal;
+            }
+            .ac-ti-published {
+                color: $color-charcoal;
+                .ac-ti-key-detail {
+                    color: fade-out($color-charcoal, 0.4);
+                }
+            }
+        }
+    }
+    &-body {
+        position: relative;
+        padding: 30px 60px;
+        color: $color-charcoal;
+        background-color: $color-white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4) inset;
+        margin-bottom: 0;
+        font-size: 14px;
+        .article-blocks {
+            text-align: center;
+            position: relative;
+            hr {
+                border-top: 1px dashed $color-light-gray;
+            }
+            .drag-icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 22px;
+                color: $color-white-2;
+                &:hover {
+                    color: $color-default;
+                    cursor: grab;
+                }
+            }
+            .sortable-chosen {
+                .article-block {
+                    //hr {
+                    //    display: none;
+                    //}
+                }
+            }
+            .sortable-ghost {
+                border: 1px dotted $color-default;
+            }
+        }
+        .article-block {
+            position: relative;
+            text-align: center;
+            .control-label {
+                color: fade-out($color-black, 0.5);
+                &::before {
+                    content: "::::  ";
+                }
+                &::after {
+                    content: "  ::::";
+                }
+            }
+        }
+        input,
+        textarea,
+        .form-control {
+            background-color: $color-white;
+            color: $color-black;
+            outline: none;
+            border: 1px dotted fade-out($color-black, 0.8);
+            box-shadow: none;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 0;
+            &:hover {
+                border: 1px dotted fade-out($color-black, 0.5);
+            }
+            &:focus,
+            &:active,
+            &:focus:active {
+                box-shadow: none;
+                outline: none;
+                border: 1px solid fade-out($color-black, 0.5);
+            }
+            &::placeholder {
+                color: fade-out($color-black, 0.5);
+            }
+        }
+        .block-delete-btn {
+            position: absolute;
+            top: 0;
+            right: -45px;
+            display: inline-block;
+            background-color: $color-black;
+            border-radius: 30px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            outline: none;
+            text-align: center;
+            padding: 0;
+            opacity: 0.3;
+            transition: all 0.2s ease-in-out;
+            &:not(:last-of-type) {
+                margin-right: 5px;
+            }
+            i {
+                font-size: 20px;
+                color: $color-white;
+                line-height: 30px;
+            }
+            @include desktopUp() {
+                &:hover {
+                    background-color: $color-red;
+                    opacity: 1;
+                    cursor: pointer;
+                    top:4px;
+                }
+            }
+        }
+        div[class*="block-container-"] {
+            position: relative;
+        }
+        .trumbowyg-editor {
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            .form-control {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+            @include iPhone() {
+                font-size: 1.4rem;
+                .form-control {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        h3 {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            .form-control {
+                font-size: 22px;
+                font-weight: 400;
+            }
+            @include iPhone() {
+                font-size: 18px;
+                .form-control {
+                    font-size: 18px;
+                }
+            }
+        }
+        p {
+            line-height: 35px;
+            //margin-bottom: 50px;
+        }
+        blockquote {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            background-color: $glass-default;
+            padding: 15px 30px;
+            position: relative;
+            box-shadow: $harsh-shadow;
+            font-family: "pixel";
+            .form-control {
+                background-color: transparent;
+                font-family: "pixel";
+                color: $color-white;
+                font-size: 32px;
+                line-height: 1em;
+                text-shadow: 2px 2px 0 $color-shadow;
+                margin-bottom: 0;
+                &::placeholder {
+                    color: fade_out($color-white, 0.5);
+                    text-shadow: 2px 2px 0 fade_out($color-shadow, 0.5);
+                }
+            }
+            p {
+                color: $color-white;
+                font-size: 32px;
+                line-height: 1em;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 0 $color-shadow;
+            }
+            footer {
+                text-align: right;
+                font-size: 18px;
+                color: fade-out($color-white, 0.3);
+                a {
+                    color: $color-white;
+                }
+                .form-control {
+                    font-size: 18px;
+                    text-align: right;
+                }
+            }
+            &::before {
+                bottom: 100%;
+                left: 80%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: fade-out($color-default, 1);
+                border-bottom-color: $glass-default;
+                border-width: 26px;
+                margin-left: -26px;
+            }
+            @include iPhone() {
+                width: 100%;
+                padding: 15px;
+                p {
+                    font-size: 24px;
+                }
+                footer {
+                    font-size: 14px; //This is translated because its a blockquote footer.
+                }
+                &::before {
+                    border-width: 16px;
+                    margin-left: -16px;
+                }
+            }
+            .playstation & {
+                background-color: $glass-playstation;
+                &::before {
+                    border-bottom-color: $glass-playstation;
+                }
+            }
+            .xbox & {
+                background-color: $glass-xbox;
+                &::before {
+                    border-bottom-color: $glass-xbox;
+                }
+            }
+            .nintendo & {
+                background-color: $glass-nintendo;
+                &::before,
+                &::after {
+                    border-bottom-color: $glass-nintendo;
+                }
+            }
+            .master-race & {
+                background-color: $glass-master-race;
+                color: $color-charcoal;
+                .form-control {
+                    text-shadow: none;
+                }
+                p {
+                    text-shadow: 2px 2px 0 fade-out($color-black, 0.9);
+                }
+                p,
+                footer,
+                footer a {
+                    color: $color-charcoal;
+                }
+                &::before,
+                &::after {
+                    border-bottom-color: $glass-master-race;
+                }
+            }
+        }
+        .img-container,
+        .video-container {
+            position: relative;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            box-shadow: $harsh-shadow;
+            img {
+                width: 100%;
+            }
+            .video-wrapper {
+                float: none;
+                clear: both;
+                width: 100%;
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+            }
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @include iPhone() {
+                iframe {
+                    max-height: 200px;
+                }
+            }
+        }
+        .caption {
+            text-align: left;
+            font-style: italic;
+            font-size: 12px;
+            width: 100%;
+            padding: 15px;
+            background-color: $glass-default;
+            color: $color-white;
+            .form-control {
+                font-style: italic;
+                font-size: 12px;
+                margin: 0 auto;
+                position: relative;
+                text-align: left;
+                width: 100%;
+                border: none;
+                background: transparent;
+                padding: 0;
+                color: $color-white;
+                min-height: initial;
+                &::placeholder {
+                    color: fade_out($color-white, 0.5);
+                }
+                &:focus,
+                &:active,
+                &:active:focus {
+                    border: none;
+                }
+            }
+            .playstation & {
+                background-color: $glass-playstation;
+                .form-control {
+                    border: 1px solid $color-playstation;
+                    &:active, &:focus, &:active:focus {
+                        border-color: darken($color-playstation, 20%);
+                    }
+                }
+            }
+            .xbox & {
+                background-color: $glass-xbox;
+                .form-control {
+                    border: 1px solid $color-xbox;
+                    &:active, &:focus, &:active:focus {
+                        border-color: darken($color-xbox, 20%);
+                    }
+                }
+            }
+            .nintendo & {
+                background-color: $glass-nintendo;
+                .form-control {
+                    border: 1px solid $color-nintendo;
+                    &:active, &:focus, &:active:focus {
+                        border-color: darken($color-nintendo, 20%);
+                    }
+                }
+            }
+            .master-race & {
+                background-color: $glass-master-race;
+                color: $color-charcoal;
+                .form-control {
+                    border: 1px solid $color-master-race;
+                    color: $color-charcoal;
+                    &:active, &:focus, &:active:focus {
+                        border-color: darken($color-master-race, 20%);
+                    }
+                    &::placeholder {
+                        color: fade_out($color-charcoal, 0.5);
+                    }
+                }
+            }
+        }
+        .code {
+            background: black;
+            color: $color-live;
+            font-size: 12px;
+            line-height: 1.4em;
+        }
+        .fast-travel {
+            background-color: $glass-default;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            box-shadow: $harsh-shadow;
+            .ft-link {
+                position: relative;
+                width: 100%;
+                line-height: 42px;
+                font-size: 32px;
+                text-align: center;
+                vertical-align: middle;
+                color: $color-white;
+                padding: 10px 10px 10px 60px;
+                border-bottom: 10px solid $color-shadow;
+                i {
+                    position: absolute;
+                    left: 10px;
+                    top: 0;
+                    font-size: 50px;
+                    color: $color-shadow;
+                }
+                .form-control {
+                    background-color: transparent;
+                    position: relative;
+                    width: 100%;
+                    line-height: 42px;
+                    font-size: 32px;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: $color-white;
+                    font-size: 32px;
+                    color: $color-white;
+                    margin-bottom: 0;
+                    &::placeholder {
+                        color: fade_out($color-white, 0.5);
+                    }
+                }
+            }
+            .ft-controls {
+                width: 100%;
+                padding: 10px 0;
+                line-height: 40px;
+                font-size: 16px;
+                display: flex;
+                flex-direction: row;
+                .ft-c-message {
+                    width: 70%;
+                    padding: 5px 20px;
+                    line-height: 28px;
+                    text-align: left;
+                    color: $color-white;
+                    .form-control {
+                        background-color: transparent;
+                        color: $color-white;
+                        margin-bottom: 0;
+                        &::placeholder {
+                            color: fade_out($color-white, 0.5);
+                        }
+                    }
+                }
+                .ft-c-buttons {
+                    width: 30%;
+                    padding: 5px 20px;
+                    line-height: 28px;
+                    text-align: right;
+                    &::after {
+                        clear: both;
+                    }
+                }
+            }
+            .playstation & {
+                background-color: $glass-playstation;
+            }
+            .xbox & {
+                background-color: $glass-xbox;
+            }
+            .nintendo & {
+                background-color: $glass-nintendo;
+            }
+            .master-race & {
+                background-color: $glass-master-race;
+                .ft-link,
+                .ft-controls .ft-c-message {
+                    color: $color-charcoal;
+                    .form-control {
+                        color: $color-charcoal;
+                    }
+                }
+            }
+            @include iPhone() {
+                .ft-link {
+                    font-size: 16px;
+                    line-height: 24px;
+                    .form-control {
+                        font-size: 16px;
+                    }
+                }
+                .ft-controls {
+                    flex-direction: column;
+                    .ft-c-message {
+                        width: 100%;
+                        font-size: 12px;
+                        line-height: 18px;
+                        .form-control {
+                            font-size: 12px;
+                        }
+                    }
+                    .ft-c-buttons {
+                        width: 100%;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+        .block-buttons {
+            background-color: $color-white;
+            display: inline-block;
+            color: $color-white;
+            padding: 10px 20px;
+            border-radius: 0;
+            margin: 0 auto;
+            .block-button {
+                border-radius: 50px;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                border: none;
+                outline: none;
+                text-align: center;
+                padding: 0;
+                position:relative;
+                transition: all 0.2s ease-in-out;
+                &:not(:last-of-type) {
+                    margin-right: 5px;
+                }
+                i {
+                    line-height: 50px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    top:4px;
+                }
+                &-heading {
+                    background-color: $color-heading;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-heading, 10%);
+                    }
+                    &:active,
+                    &:active:focus {
+                        background-color: darken($color-heading, 20%);
+                    }
+                }
+                &-subheading {
+                    background-color: $color-subheading;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-heading, 10%);
+                    }
+                }
+                &-text {
+                    background-color: $color-text;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-text, 10%);
+                    }
+                }
+                &-image {
+                    background-color: $color-image;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-image, 10%);
+                    }
+                }
+                &-video {
+                    background-color: $color-video;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-video, 10%);
+                    }
+                }
+                &-link {
+                    background-color: $color-link;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-link, 10%);
+                    }
+                }
+                &-quote {
+                    background-color: $color-quote;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-quote, 10%);
+                    }
+                }
+                &-gallery {
+                    background-color: $color-gallery;
+                    color: $color-white;
+                    &:hover {
+                        background-color: darken($color-gallery, 10%);
+                    }
+                }
+                @include iPhone() {
+                    margin-bottom: 10px;
+                    &:not(:last-of-type) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @include iPhone() {
+        .game-card-container {
+            margin-top: 0;
+        }
+        &-title {
+            padding: 15px;
+        }
+        &-body {
+            padding: 15px;
+            h2 {
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            .block-delete-btn {
+                background-color: $color-red;
+                opacity: 1;
+                right: -10px;
+                top: -10px;
+            }
+        }
+    }
+}
+.game-card {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    background-color: fade_out($color-black, 0.4);
+    box-shadow: 0 12px 14px -10px  $color-shadow;
+    transition: all $kard-animation-speed ease-in-out;
+    opacity: 0;
+    animation: card_load forwards $kard-animation-speed;
+    &::after {
+        clear: both;
+        display: block;
+        content: "";
+    }
+    .gc-left {
+        width: 70%;
+        float: left;
+        text-align: right;
+        padding: 10px;
+        .gc-title {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.3em;
+            color: $color-white;
+            border-bottom: 1px solid fade-out($color-white, 0.4);
+            @include iPhone() {
+                font-size: 20px;
+            }
+        }
+        .gc-detail-row {
+            font-size: 11px;
+            color: $color-white;
+            padding: 3px 0;
+            .gc-detail-key {
+                color: fade-out($color-white, 0.4);
+            }
+        }
+    }
+    .gc-right {
+        width: 30%;
+        float: left;
+        &::after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+        .gc-art {
+            width: 70%;
+            float: left;
+            padding: 10px 0;
+            text-align: center;
+            img {
+                box-shadow: 0 7px 11px -4px $color-shadow;
+                margin-bottom: 10px;
+            }
+        }
+        .gc-ratings {
+            width: 30%;
+            float: left;
+            padding: 10px;
+            img {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .gc-score-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        overflow: visible;
+        background-color: $color-background;
+        .gc-score {
+            background-color: $color-white;
+            position: relative;
+            height: 5px;
+            width: 10%;
+            text-align: right;
+            transition: width $kard-animation-speed ease-in-out;
+            .gc-score-inner {
+                position: absolute;
+                padding: 2px;
+                width: 40px;
+                height: 40px;
+                top: -18px;
+                right: 0;
+                border-radius: 100%;
+                background-color: $color-background;
+                &::after {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 19px;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 34px;
+                    border-radius: 100%;
+                    text-align: center;
+                    border: 2px solid $color-white;
+                    background-color: $color-background;
+                    content: "0";
+                    color: $color-white;
+                }
+
+            }
+            &.score {
+                @each $score, $color in (
+                        10 : $color-score-10,
+                        9 : $color-score-9,
+                        8 : $color-score-8,
+                        7 : $color-score-7,
+                        6 : $color-score-6,
+                        5 : $color-score-5,
+                        4 : $color-score-4,
+                        3 : $color-score-3,
+                        2 : $color-score-2,
+                        1 : $color-score-1
+                ) {
+                    @include game_score($score, $color);
+                }
+            }
+        }
+    }
+    @include upToDesktopMax() {
+        width: 50%;
+    }
+    @include iPhone() {
+        width: 100%;
+    }
+}
+.card-builder {
+    .image-uploader {
+        margin-bottom: 8px;
+    }
+}

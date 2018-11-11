@@ -1,0 +1,31 @@
+//Ratio Variables
+$ultra-wide-ratio: 42.8571428571429%;
+$oled-ratio: 56.25%;
+
+//Ratio for Kard Sizes:
+$card-ratio: $ultra-wide-ratio;
+$card-ratio-mobile: $oled-ratio;
+
+//Kard Animation Speed
+$kard-animation-speed: .5s;
+
+//Nav Animation Speed
+$nav-animation-speed: .4s;
+
+//Button Animation Speed
+$btn-animation-speed: 0.1s;
+
+//Spinning Animation Speed
+$spinning-icon-speed: 1s;
+
+//Article Header zoom speed
+$article-header-animation-speed: .6s;
+
+//Article Game Card Animation Speed
+$score-animation-speed: 1s;
+
+//Set filter Button Width easily
+$filter-btn-width: 110px;
+
+//Article Block Shadow
+$harsh-shadow: 6px 7px 0 0 fade-out(#000, 0.85);

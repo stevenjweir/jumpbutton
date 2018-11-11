@@ -1,0 +1,84 @@
+.tooltip {
+    &-inner {
+        font-weight: 700;
+        color: $color-charcoal;
+        background-color: $color-secondary;
+        .playstation & {
+            background-color: $color-playstation-secondary;
+            color: $color-white;
+        }
+        .xbox & {
+            background-color: $color-xbox-secondary;
+        }
+        .nintendo & {
+            background-color: $color-nintendo-secondary;
+        }
+        .master-race & {
+            background-color: $glass-master-race;
+            color: $color-charcoal;
+        }
+    }
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: $color-secondary;
+    .playstation & {
+        border-top-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        border-top-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        border-top-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        border-top-color: $glass-master-race;
+    }
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+    border-right-color: $color-secondary;
+    .playstation & {
+        border-right-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        border-right-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        border-right-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        border-right-color: $glass-master-race;
+    }
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: $color-secondary;
+    .playstation & {
+        border-bottom-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        border-bottom-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        border-bottom-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        border-bottom-color: $glass-master-race;
+    }
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+    border-left-color: $color-secondary;
+    .playstation & {
+        border-left-color: $color-playstation-secondary;
+    }
+    .xbox & {
+        border-left-color: $color-xbox-secondary;
+    }
+    .nintendo & {
+        border-left-color: $color-nintendo-secondary;
+    }
+    .master-race & {
+        border-left-color: $glass-master-race;
+    }
+}

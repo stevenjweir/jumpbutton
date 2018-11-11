@@ -1,0 +1,170 @@
+.filter-row {
+     .filter-bar {
+         width: calc(100% - 20px);
+         border-radius: 10px;
+         padding: 15px 20px;
+         background-color: $glass-default;
+         box-shadow: 5px 10px 10px 0 $color-shadow;
+         float: left;
+         padding-right: $filter-btn-width;
+     }
+     .filter-btn {
+         top: -15px;
+         position: relative;
+         padding: 0;
+         width: 20px;
+         height: $filter-btn-width;
+         float: left;
+         overflow: visible;
+         .btn-box {
+             width: $filter-btn-width;
+             padding: 10px 0px 10px 10px;
+             float: right;
+             border-radius: 100%;
+             background-color: $color-background;
+             overflow: hidden;
+         }
+     }
+     .playstation & {
+         .filter-bar {
+             background-color: $glass-playstation;
+         }
+     }
+     .xbox & {
+         .filter-bar {
+             background-color: $glass-xbox;
+         }
+     }
+     .nintendo & {
+         .filter-bar {
+             background-color: $glass-nintendo;
+         }
+     }
+     .master-race & {
+         .filter-bar {
+             background-color: $glass-master-race;
+         }
+     }
+    @include iPhone() {
+        .filter-bar {
+            padding-right: 60px;
+            border-radius: 7px;
+            .selectize-control {
+                margin-bottom: 25px;
+            }
+        }
+        .filter-btn {
+            .btn-box {
+                padding: 4px;
+                width: 70px;
+            }
+        }
+    }
+}
+
+//Input JS Library
+.selectized {
+    &+.selectize-control {
+        .selectize-input {
+            background-color: $color-background;
+            border: 1px solid $color-default;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 0 0 fade-out($color-black, 0.8);
+            overflow: visible;
+            &::after {
+                content: "";
+                position: absolute;
+                top: -2px;
+                right: -2px;
+                bottom: -2px;
+                left: -2px;
+                box-shadow: -2px -2px 0 0 fade-out($color-white, 0.8);
+                border-radius: 10px;
+            }
+            input {
+                min-height: 32px !important;
+                width: auto !important;
+                &::placeholder {
+                    color: fade-out($color-white, 0.5);
+                    font-weight: 400;
+                }
+                color: $color-white;
+            }
+            .playstation & {
+                border-color: $color-playstation;
+            }
+            .xbox & {
+                border-color: $color-xbox;
+            }
+            .nintendo & {
+                border-color: $color-nintendo;
+            }
+            .master-race & {
+                border-color: $color-master-race;
+            }
+        }
+        .selectize-dropdown {
+            background-color: $color-background;
+            border: 2px solid $color-default;
+            color: rgba($color-white, 0.8);
+            .playstation & {
+                border-color: $color-playstation;
+            }
+            .xbox & {
+                border-color: $color-xbox;
+            }
+            .nintendo & {
+                border-color: $color-nintendo;
+            }
+            .master-race & {
+                border-color: $color-master-race;
+            }
+            .selectize-dropdown-content {
+                .option {
+                    &.active {
+                        color: $color-background;
+                        background-color: $color-secondary;
+                        .playstation & {
+                            background-color: $color-playstation-secondary;
+                        }
+                        .xbox & {
+                            background-color: $color-xbox-secondary;
+                        }
+                        .nintendo & {
+                            background-color: $color-nintendo-secondary;
+                        }
+                        .master-race & {
+                            background-color: $color-master-race-secondary;
+                        }
+                    }
+                }
+            }
+        }
+        &.multi {
+            .selectize-input {
+                div {
+                    margin: 0 5px 2px 0;
+                    padding: 5px 8px;
+                    color: $color-background;
+                    background-color: $color-secondary;
+                    .playstation & {
+                        background-color: $color-playstation-secondary;
+                    }
+                    .xbox & {
+                        background-color: $color-xbox-secondary;
+                    }
+                    .nintendo & {
+                        background-color: $color-nintendo-secondary;
+                    }
+                    .master-race & {
+                        background-color: $color-master-race-secondary;
+                    }
+                }
+                &.has-items {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

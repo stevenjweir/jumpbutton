@@ -1,0 +1,38 @@
+@mixin game_score($score, $color) {
+    &-#{$score} {
+        background-image: linear-gradient( 90deg, adjust-hue($color, -40deg), $color 100%);
+        width: $score*10%;
+        animation: score_animate_#{$score} $score-animation-speed forwards;
+        animation-timing-function: linear;
+        .gc-score-inner {
+            &::after {
+                content: quote($score);
+                border-color: $color;
+                color: $color;
+            }
+        }
+    }
+    @keyframes score_animate_#{$score} {
+        0% {
+            width: 10%;
+        }
+        70% {
+            width: $score*10%;
+        }
+    }
+}
+
+@mixin admin_game_score($score, $color) {
+    &-#{$score} {
+        .gc-score-inner {
+            position: relative;
+            top: 0;
+            display: inline-block;
+            &::after {
+                content: quote($score);
+                border-color: $color;
+                color: $color;
+            }
+        }
+    }
+}
